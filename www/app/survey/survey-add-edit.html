@@ -1,9 +1,0 @@
-<h1>Add / Edit survey</h1>
-<form name="new_survey_form">
-    <div ng-repeat="(attr_name, attr_value) in model_def">
-        <label for="{{attr_name}}">{{attr_name}}</label>
-        <input type="text" ng-model="survey[attr_name]" name="{{attr_name}}" />
-    </div>
-    <button ng-click="save(survey)">Save survey</button>
-    <button ui-sref="surveys.list">Cancel</button>
-</form>

@@ -1,9 +1,0 @@
-<h1>Add / Edit restaurant</h1>
-<form name="new_restaurant_form">
-    <div ng-repeat="(attr_name, attr_value) in model_def">
-        <label for="{{attr_name}}">{{attr_name}}</label>
-        <input type="text" ng-model="restaurant[attr_name]" name="{{attr_name}}" />
-    </div>
-    <button ng-click="save(restaurant)">Save restaurant</button>
-    <button ui-sref="restaurants.list">Cancel</button>
-</form>

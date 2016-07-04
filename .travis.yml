@@ -10,6 +10,7 @@ sudo: false
 
 script:
   - "grunt build"
+  - "make test"
 
 branches:
   only:
