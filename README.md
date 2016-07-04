@@ -5,7 +5,7 @@
 ```{r, engine='bash'}
 npm install
 bower install
-sails lift 
+node app.js 
 ```
 
 
