@@ -34,7 +34,7 @@
     "superagent": "^2.0.0"
   },
   "scripts": {
-    "start": "sails lift",
+    "start": "sails lift --port 80",
     "debug": "node debug app.js"
   },
   "main": "app.js",
