@@ -1,0 +1,22 @@
+<div class="container">
+  <h1>Users</h1>
+  <table>
+    <th>id</th>
+    <th>email</th>
+    <th>name</th>
+    <th>createdAt</th>
+    <td>updatedAt</td>
+    <tbody>
+      <tr ng-repeat="user in users">
+        <td>{{user.id}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.name}}</td>
+        <td>{{user.createdAt}}</td>
+        <td>{{user.updatedAt}}</td>
+        <td><a class="btn" href="" ui-sref="users.edit({ id: user.id })">Edit</a></td>
+        <td><a class="btn" href="" ng-click="remove(user)">Delete</a></td>
+      </tr>
+    </tbody>
+  </table>
+  <div ng-show="users.length === 0">Looks like you haven't added any users yet?</div>
+</div>

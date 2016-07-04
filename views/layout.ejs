@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Survey tabajara</title>
+    <!-- Viewport mobile tag for sensible mobile support -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!--SCRIPTS-->
+    <script src="/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="/vendor/Materialize/dist/js/materialize.min.js"></script>
+    <script src="/vendor/angular/angular.min.js"></script>
+    <script src="/vendor/lodash/dist/lodash.min.js"></script>
+    <script src="/vendor/restangular/dist/restangular.min.js"></script>
+    <script src="/vendor/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="/vendor/ngstorage/ngStorage.min.js"></script>
+    <script src="/vendor/moment/min/moment.min.js"></script>
+    <script src="/app/app.js"></script>
+    <script src="/app/components/sails-resource/sails-resource-service.js"></script>
+    <script src="/app/home/home-controller.js"></script>
+    <script src="/app/home/home-routes.js"></script>
+    <script src="/app/login/login-controller.js"></script>
+    <script src="/app/login/login-routes.js"></script>
+    <script src="/app/navbar/navbar-directive.js"></script>
+    <script src="/app/restaurant/restaurant-controller.js"></script>
+    <script src="/app/restaurant/restaurant-routes.js"></script>
+    <script src="/app/survey/survey-controller.js"></script>
+    <script src="/app/survey/survey-routes.js"></script>
+    <script src="/app/user/user-controller.js"></script>
+    <script src="/app/user/user-routes.js"></script>
+    <script src="/app/vote/vote-controller.js"></script>
+    <script src="/app/vote/vote-routes.js"></script>
+    <!--SCRIPTS END-->
+    <!--STYLES-->
+    <link rel="stylesheet" href="/vendor/Materialize/dist/css/materialize.min.css">
+    <link rel="stylesheet" href="/styles/importer.css">
+    <!--STYLES END-->
+  </head>
+
+  <body ng-app="survey-votation-tabajara">
+    <navbar></navbar>
+
+    <div ui-view></div>
+  </body>
+</html>

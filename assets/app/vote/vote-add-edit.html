@@ -1,0 +1,9 @@
+<h1>Add / Edit vote</h1>
+<form name="new_vote_form">
+    <div ng-repeat="(attr_name, attr_value) in model_def">
+        <label for="{{attr_name}}">{{attr_name}}</label>
+        <input type="text" ng-model="vote[attr_name]" name="{{attr_name}}" />
+    </div>
+    <button ng-click="save(vote)">Save vote</button>
+    <button ui-sref="votes.list">Cancel</button>
+</form>

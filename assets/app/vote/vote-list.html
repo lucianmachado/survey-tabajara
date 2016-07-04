@@ -1,0 +1,12 @@
+<h1>Votes</h1>
+<ul>
+    <li ng-repeat="vote in votes">
+        <div>
+            <p ng-repeat="(key, val) in model_def">{{key}} : {{vote[key]}}</p>
+        </div>
+        <a href="" ui-sref="votes.edit({ id: vote.id })">Edit</a>
+        <a href="" ng-click="remove(vote)">Delete</a>
+    </li>
+</ul>
+<div ng-show="votes.length === 0">Looks like you haven't added any votes yet?</div>
+<a ng-hide="adding" ui-sref="votes.add">Add A New Vote</a>
