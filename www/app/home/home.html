@@ -1,0 +1,36 @@
+<div class="container">
+  <h1>Olá...</h1>
+
+  <div ng-show="{{!survey}}" class="header">
+    <h5>Não há nenhuma votação em andamento</h5>
+    <button class="btn" type="button" ng-click="starSurvey()" name="start-survey-button">Iniciar votação</button>
+  </div>
+
+  <div ng-show="{{survey}}" class="header">
+    <h5>Há uma votação em andamento:
+      {{survey.id}}</h5>
+    <h5>Votos:
+      {{survey.votes.length}}</h5>
+    <button class="btn" type="button" ng-click="finishSurvey(survey)" name="finish-survey-button">Encerrar Votação</button>
+    <h3>Restaurantes</h3>
+    <table>
+      <th>ID</th>
+      <th>NOME</th>
+      <th>Última vitória</th>
+      <th>Votos</th>
+      <tbody>
+        <tr ng-repeat="restaurant in restaurants">
+          <td>{{restaurant.id}}</td>
+          <td>{{restaurant.name}}</td>
+          <td>{{restaurant.lastWin||"Neva :("}}</td>
+          <td>{{votes(restaurant.id)}}</td>
+          <td>
+            <button ng-show="survey" ng-click="vote(survey.id,restaurant.id)" type="button" class="btn" name="button-vote">Votar</button>
+          </td>
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
